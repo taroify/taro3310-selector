@@ -1,6 +1,6 @@
-### Selector API 在支付宝小程序上存在一些问题
+## Selector API 在支付宝小程序上存在一些问题
 
-#### 不支持 boundingClientRect(cb) 回调
+### 不支持 boundingClientRect(cb) 回调
 
 ```tsx
 
@@ -19,7 +19,7 @@ useReady(() => {
 })
 ```
 
-#### fields is not a function
+### fields is not a function
 
 ```tsx
 useReady(() => {
@@ -46,34 +46,7 @@ useReady(() => {
 
 ![fields](https://raw.githubusercontent.com/taroify/taro3310-selector/main/images/fields.png)
 
-#### fields is not a function
-
-```tsx
-useReady(() => {
-  createSelectorQuery().select(".index")
-    .fields({
-      rect: true,
-      node: true,
-      computedStyle: ["width", "height"]
-    }, fields => console.log("fields", fields))
-    .exec()
-})
-
-useReady(() => {
-  createSelectorQuery().select(".index")
-    .fields({
-      rect: true,
-      node: true,
-      computedStyle: ["width", "height"]
-    })
-    .exec(fields => console.log("fields exec", fields))
-})
-```
-调用 fields() 方法时，报错：
-
-![fields](https://raw.githubusercontent.com/taroify/taro3310-selector/main/images/fields.png)
-
-#### 不支持 scrollOffset(cb) 回调
+### 不支持 scrollOffset(cb) 回调
 
 ```tsx
 useReady(() => {
@@ -91,7 +64,7 @@ useReady(() => {
 })
 ```
 
-#### node is not a function
+### node is not a function
 
 ```tsx
   useReady(() => {
